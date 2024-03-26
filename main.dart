@@ -4,7 +4,7 @@ import 'file_operations.dart';
 import 'report_operations.dart';
 
 Future<void> main() async {
-  var files = ['arquivo1.txt', 'arquivo2.txt'];
+  var files = ['arquivo1.txt', 'arquivo2.txt', 'arquivo3.txt'];
 
   var dataList = await FileOperations.readFiles(files);
 
