@@ -4,9 +4,11 @@ import 'file_operations.dart';
 import 'report_operations.dart';
 
 Future<void> main() async {
-  var files = ['arquivo1.txt', 'arquivo2.txt', 'arquivo3.txt'];
+  var files = ['arquivo2.txt', 'arquivo1.txt', 'arquivo3.txt'];
 
   var dataList = await FileOperations.readFiles(files);
+
+  dataList.sort((a, b) => a.date.compareTo(b.date));
 
   var totalRevenue = dataList.fold<double>(
       0, (previousValue, element) => previousValue + element.revenue);
